@@ -6,7 +6,7 @@ let divColor = "black";
 //initial div creation
 for (i = 0; i < numDivs * numDivs; i++) {
     const div = document.createElement("div");
-    div.setAttribute("style", `width:${(508 - 2 * numDivs) / numDivs}px; height:${(508 - 2 * numDivs) / numDivs}px; margin:0px; background-color: rgb(255,255,255)`)
+    div.setAttribute("style", `width:${(640 - 2 * numDivs) / numDivs}px; height:${(640 - 2 * numDivs) / numDivs}px; margin:0px; background-color: rgb(255,255,255)`)
     container.append(div);
 }
 mouseover();
@@ -33,19 +33,9 @@ clearBTN.addEventListener("click", () => {
     const divs = document.querySelectorAll(".container > div");
     divs.forEach(div => {
         div.style.backgroundColor = "rgb(255,255,255)";
-        div.style.border = "1px solid rgb(228, 228, 228)";
+        div.style.border = "1px solid rgb(245, 245, 245)";
     })
 });
-
-
-
-//initial div creation
-for (i = 0; i < numDivs * numDivs; i++) {
-    const div = document.createElement("div");
-    div.setAttribute("style", `width:${(508 - 2 * numDivs) / numDivs}px; height:${(508 - 2 * numDivs) / numDivs}px; margin:0px; background-color: rgb(255,255,255)`)
-    container.append(div);
-}
-mouseover();
 
 //slider div creation
 const slider = document.querySelector("input");
@@ -54,7 +44,7 @@ slider.addEventListener("input", () => {
     numDivs = slider.value;
     for (i = 0; i < numDivs * numDivs; i++) {
         const div = document.createElement("div");
-        div.setAttribute("style", `width:${(508 - 2 * numDivs) / numDivs}px; height:${(508 - 2 * numDivs) / numDivs}px; margin:0px; background-color: rgb(255,255,255)`)
+        div.setAttribute("style", `width:${(640 - 2 * numDivs) / numDivs}px; height:${(640 - 2 * numDivs) / numDivs}px; margin:0px; background-color: rgb(255,255,255)`)
         container.append(div);
     }
     mouseover();
