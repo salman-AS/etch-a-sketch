@@ -1,20 +1,29 @@
-body{
+body {
     background-color: rgb(230, 230, 230);
 }
 
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#title{
-    font-size: 100px;
+#title {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 75px;
+    letter-spacing: 0.8px;
+    word-spacing: 1.8px;
+    color: #2B2B2B;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
 }
 
-.container{
-    border: 1px solid black;
+.container {
+    border: 1px solid rgba(0, 0, 0, 0);
     width: 640px;
     aspect-ratio: 1/1;
     display: flex;
@@ -24,17 +33,75 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.container > *{
+.container>* {
     border: 1px solid rgb(245, 245, 245);
     transition: 0.4s;
 }
 
-.btncon{
+.btncon {
     display: flex;
-    justify-content: space-around;
+    width: 640px;
+    height: 100px;
+    justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
 }
 
-button{
-    width: 100px;
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    transform: translate(0, -4px);
+}
+
+/* Removes default focus */
+.slider:focus {
+    outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+    background-color: #8f8f8f;
+    border-radius: 0.5rem;
+    height: 2.5px;
+}
+
+/* slider thumb */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -6.75px;
+    /* Centers thumb on the track */
+    background-color: #00608a;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+.slider:hover::-webkit-slider-thumb {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.95);
+}
+
+button {
+    background-color: white;
+    color: black;
+    width: 110px;
+    height: 30px;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+    transform: translate(0, -5px);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:active {
+    background-color: #444444;
+    border: 2px solid #444444;
+    transform: translate(0, -3px);
 }

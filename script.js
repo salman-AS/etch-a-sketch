@@ -63,8 +63,8 @@ function mouseover() {
             else if (divColor == "grey") {
                 let rgbColor = div.style.backgroundColor;                                               //to extract rgb value from backgroundcolore
                 let rgbArr = rgbColor.substring(4, rgbColor.length - 1).replace(/ /g, '').split(',');   //
-                let x = parseInt(rgbArr[0]);
-                div.style.backgroundColor = `rgb(${x-=20},${x},${x})`;
+                let x = parseInt(rgbArr[0])-20;
+                div.style.backgroundColor = `rgb(${x},${x},${x})`;
                 div.style.border = `1px solid rgb(${x},${x},${x})`;
             }
             else if (divColor == "rainbow"){
